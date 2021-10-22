@@ -2,7 +2,9 @@ name: GitHubAction Demo Project
  
 on:
   push:
-    branches: [ master ]
+    branches: 
+     - main
+  workflow_dispatch:
  
 jobs:
   build-and-deploy:    
