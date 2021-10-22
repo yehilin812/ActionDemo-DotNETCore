@@ -20,13 +20,13 @@ jobs:
         include-prerelease: true
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+     - run: dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish ActionDemo-DotNETCore/ActionDemo.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+     - run: dotnet publish ActionDemo-DotNETCore/ActionDemo.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: echo
-      run: echo ${{env.DOTNET_ROOT}}
+      -run: echo ${{env.DOTNET_ROOT}}
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
