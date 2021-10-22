@@ -19,14 +19,14 @@ jobs:
         dotnet-version: '3.1.x'
         include-prerelease: true
 
- - name: Build with dotnet
+     - name: Build with dotnet
      run: dotnet build --configuration Release
 
-    - name: dotnet publish
+     - name: dotnet publish
      run: dotnet publish ActionDemo-DotNETCore/ActionDemo.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
 
-    - name: echo
+     - name: echo
       run: echo ${{env.DOTNET_ROOT}}
 
     - name: Upload artifact for deployment job
