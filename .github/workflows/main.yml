@@ -18,11 +18,7 @@ jobs:
       with:
         dotnet-version: '3.1.102'
  
-    - name: Build with dotnet
-      run: dotnet build GitHubActionDemo/GitHubAction.csproj --configuration Release
- 
-    - name: dotnet publish
-      run: dotnet publish -c Release GitHubActionDemo/GitHubAction.csproj -o ${{env.DOTNET_ROOT}}/GitHubActionDemo
+
         
     - name: Deploy to IIS
       run: |
